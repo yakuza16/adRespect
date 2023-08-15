@@ -1,5 +1,9 @@
 import anime from "animejs/lib/anime.es.js";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import "./style.css";
+
+Aos.init();
 
 const offerMenu = document.getElementById("offer-menu");
 const offerMenuList = document.getElementById("offer-menu-list");
@@ -7,7 +11,18 @@ const searchLoupBtn = document.getElementById("searchLoup");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 const searchBar = document.getElementById("search");
+const sliderImg = document.getElementById("slider-image");
+const prevSlideBtn = document.getElementById("prevSlideBtn");
+const nextSlideBtn = document.getElementById("nextSlideBtn");
 let isSearchBarOpen = false;
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 15) {
+    sliderImg.classList.remove("blur-lg");
+  } else if (window.scrollY <= 15) {
+    sliderImg.classList.add("blur-lg");
+  }
+});
 
 offerMenu.addEventListener("mouseover", () =>
   offerMenuList.classList.remove("hidden")

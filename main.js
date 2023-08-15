@@ -5,6 +5,8 @@ const offerMenu = document.getElementById("offer-menu");
 const offerMenuList = document.getElementById("offer-menu-list");
 const searchLoupBtn = document.getElementById("searchLoup");
 const searchInput = document.getElementById("search-input");
+const searchBtn = document.getElementById("search-btn");
+const searchBar = document.getElementById("search");
 let isSearchBarOpen = false;
 
 offerMenu.addEventListener("mouseover", () =>
@@ -20,21 +22,32 @@ offerMenu.addEventListener("touchend", () =>
   offerMenuList.classList.add("hidden")
 );
 
+function hideSearchBar() {
+  searchBar.value = "";
+  anime({
+    targets: searchInput,
+    translateX: 550,
+    easing: "linear",
+  });
+  setTimeout(() => searchInput.classList.add("hidden"), 400);
+  isSearchBarOpen = false;
+}
+
 searchLoupBtn.addEventListener("click", () => {
   if (!isSearchBarOpen) {
+    searchInput.classList.remove("hidden");
     anime({
       targets: searchInput,
-      translateX: -500,
+      translateX: -550,
       easing: "easeInOutSine",
     });
-    // searchInput.classList.remove("hidden");
+    isSearchBarOpen = !isSearchBarOpen;
   } else {
-    anime({
-      targets: searchInput,
-      translateX: 500,
-      easing: "linear",
-    });
-    // searchInput.classList.add("hidden");
+    hideSearchBar();
   }
-  isSearchBarOpen = !isSearchBarOpen;
 });
+
+searchBtn.addEventListener("click", hideSearchBar);
+searchBar.addEventListener("keyup", (e) =>
+  e.key === "Enter" ? hideSearchBar() : null
+);

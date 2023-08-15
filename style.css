@@ -1,6 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;600&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    font-family: Inter;
+  }
+}
+
+/* font-family: "Inter", sans-serif;
+font-family: "Montserrat", sans-serif; */
 
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;

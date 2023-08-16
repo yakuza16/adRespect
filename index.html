@@ -8,7 +8,7 @@
       Rekrutacja Front-End Developer Etap 2 - adRespect Marcin Spławiński
     </title>
   </head>
-  <body class="overflow-x-hidden w-100">
+  <body class="overflow-x-hidden w-[100vw]">
     <!-- TOP NAV START -->
     <nav class="px-24 py-16 md:py-6">
       <div
@@ -113,12 +113,14 @@
     <!-- END NAV -->
     <!-- HERO START -->
     <header class="w-full">
-      <div class="flex flex-col lg:flex-row">
+      <div class="flex flex-col lg:flex-row lg:h-[78vh]">
         <!-- Left Section -->
         <div
           class="lg:w-1/2 bg-[#DCC1AB] p-24 md:p-48 flex flex-col justify-center space-x-4 space-y-6 md:space-y-14"
         >
-          <h1 class="text-4xl md:text-6xl font-secondary font-bold mb-4">
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-secondary font-bold mb-4"
+          >
             Nowoczesna aranżacja Twojego ogrodu
           </h1>
           <p>
@@ -277,7 +279,7 @@
       <!-- SECTION OFFER END -->
       <!-- ABOUT COMPANY START -->
       <section class="w-full text-white">
-        <div class="flex flex-col lg:flex-row">
+        <div class="flex flex-col lg:flex-row lg:h-[60vh]">
           <!-- Left Section -->
           <div
             class="lg:w-1/2 bg-[#1B5B31] p-24 md:p-48 flex flex-col justify-center space-x-4 space-y-6 md:space-y-14 peer order-last"
@@ -291,14 +293,14 @@
               >
                 O firmie
               </p>
-              <h1
+              <h4
                 data-aos="fade-left"
                 data-aos-easing="linear"
                 data-aos-duration="3500"
                 class="text-4xl md:text-6xl font-secondary font-bold mb-4"
               >
                 Tworzymy z pasją
-              </h1>
+              </h4>
               <p
                 data-aos="fade-up-left"
                 data-aos-easing="linear"
@@ -343,6 +345,56 @@
         </div>
       </section>
       <!-- ABOUT COMPANY END -->
+      <!-- PROJECTS START -->
+      <section class="bg-[#DCC1AB] space-y-6 lg:space-y-16">
+        <div
+          class="flex flex-col justify-center items-start w-full lg:pl-48 space-y-3"
+        >
+          <p class="text-xs text-[#1B5B31]">Realizacje</p>
+          <h5 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
+            Nasze projekty
+          </h5>
+        </div>
+        <div class="relative">
+          <div class="container mx-auto p-4 relative">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+              id="masonry-container"
+            >
+              <!-- Zdjęcia ogrodów będą tutaj -->
+            </div>
+            <button
+              data-aos="fade-left"
+              data-aos-easing="linear"
+              data-aos-duration="3500"
+              id="loadMoreBtn"
+              class="mt-4 py-2 px-4 fixed z-100 bottom-0 left-1/2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              Załaduj więcej
+            </button>
+          </div>
+          <div
+            id="imageModal"
+            class="hidden fixed inset-0 flex items-center justify-center bg-black bg-opacity-75"
+          >
+            <div class="bg-white p-4 rounded-lg">
+              <button
+                id="closeModalBtn"
+                class="absolute top-2 right-2 text-gray-600 hover:text-gray-800"
+              >
+                &times;
+              </button>
+              <img
+                id="modalImage"
+                src=""
+                alt="Zdjęcie ogrodu"
+                class="max-w-full max-h-screen"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- PROJECTS END -->
     </main>
     <script type="module" src="/main.js"></script>
   </body>

@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "masonry-layout": "^4.2.2"
   }
 }

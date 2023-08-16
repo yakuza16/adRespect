@@ -148,7 +148,7 @@ function loadMoreImages() {
 
   // Inicjalizacja masonry po dodaniu nowych zdjęć
   new Masonry(masonryContainer, {
-    itemSelector: ".masonry-item",
+    itemSelector: ".masonry-grid",
     columnWidth: ".masonry-item",
     percentPosition: true,
   });

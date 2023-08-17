@@ -1,6 +1,6 @@
 import anime from "animejs/lib/anime.es.js";
 import Aos from "aos";
-import Masonry from "masonry-layout";
+import macy from "macy";
 import "aos/dist/aos.css";
 import "./style.css";
 
@@ -103,13 +103,37 @@ searchBar.addEventListener("keyup", (e) =>
 );
 
 // MASONRY
-const masonryContainer = document.getElementById("masonry-container");
-const loadMoreBtn = document.getElementById("loadMoreBtn");
-const imageModal = document.getElementById("imageModal");
-const modalImage = document.getElementById("modalImage");
-const closeModalBtn = document.getElementById("closeModalBtn");
+const masonryGridContainer = document.getElementById("masonryContainer");
 
-let currentImageIndex = 0;
+function createGallery(images, parentElement) {
+  images.forEach((image) => {
+    const imageElement = document.createElement("img");
+    imageElement.setAttribute("src", image);
+    parentElement.appendChild(imageElement);
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () =>
+  createGallery(images, masonryGridContainer)
+);
+window.addEventListener("scroll", () => masonry.recalculate());
+
+// createGallery(images, masonryGridContainer);
+
+const masonry = macy({
+  container: masonryGridContainer,
+  trueOrder: false,
+  waitForImages: false,
+  margin: 36,
+  columns: 3,
+  breakAt: {
+    1200: 5,
+    940: 3,
+    520: 2,
+    400: 1,
+  },
+});
+
 const images = [
   "/public/garden-photos/garden1.png",
   "/public/garden-photos/garden2.png",
@@ -120,56 +144,4 @@ const images = [
   "/public/garden-photos/garden7.png",
   "https://cdn.pixabay.com/photo/2014/07/31/17/39/meadow-406514_1280.jpg",
   "https://cdn.pixabay.com/photo/2016/10/18/20/46/tea-plantation-1751369_1280.jpg",
-  // Dodaj więcej linków do zdjęć
 ];
-
-function openModal(index) {
-  modalImage.src = images[index];
-  imageModal.classList.remove("hidden");
-}
-
-function closeModal() {
-  imageModal.classList.add("hidden");
-}
-
-function loadMoreImages() {
-  const numImagesToAdd = 1; // Możesz zmienić ilość wczytywanych zdjęć
-  for (
-    let i = 0;
-    i < numImagesToAdd && currentImageIndex < images.length;
-    i++
-  ) {
-    const image = document.createElement("img");
-    image.src = images[currentImageIndex];
-    image.classList.add("masonry-item");
-    masonryContainer.appendChild(image);
-    currentImageIndex++;
-  }
-
-  // Inicjalizacja masonry po dodaniu nowych zdjęć
-  new Masonry(masonryContainer, {
-    itemSelector: ".masonry-grid",
-    columnWidth: ".masonry-item",
-    percentPosition: true,
-  });
-
-  if (currentImageIndex >= images.length) {
-    loadMoreBtn.disabled = true;
-  }
-}
-window.addEventListener("DOMContentLoaded", loadMoreImages());
-
-loadMoreBtn.addEventListener("click", loadMoreImages);
-
-masonryContainer.addEventListener("click", (event) => {
-  if (event.target.classList.contains("masonry-item")) {
-    const index = Array.from(masonryContainer.children).indexOf(event.target);
-    openModal(index);
-  }
-});
-
-closeModalBtn.addEventListener("click", closeModal);
-imageModal.addEventListener("click", closeModal);
-modalImage.addEventListener("click", (event) => {
-  event.stopPropagation(); // Zapobiegamy zamknięciu modala po kliknięciu w sam obrazek
-});

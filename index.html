@@ -346,7 +346,7 @@
       </section>
       <!-- ABOUT COMPANY END -->
       <!-- PROJECTS START -->
-      <section class="bg-[#DCC1AB] space-y-6 lg:space-y-16">
+      <section class="bg-[#DCC1AB] space-y-6 lg:space-y-16 relative pb-24">
         <div class="flex flex-col justify-center items-start w-full space-y-3">
           <div class="pl-4 lg:pl-48 my-6 lg:my-24">
             <p class="text-xs text-[#1B5B31]">Realizacje</p>
@@ -356,6 +356,17 @@
           </div>
           <div id="masonryContainer" class="w-full"></div>
         </div>
+        <button
+          id="generateMoreImagesBtn"
+          class="flex bg-transparent rounded-full px-4 text-black p-2 border-2 border-black items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group absolute bottom-5 left-1/2 transform -translate-x-1/2"
+        >
+          Rozwiń
+          <img
+            class="transform -rotate-90 ml-4 p-1 rounded-lg"
+            src="./public/left-arrow.svg"
+            alt=""
+          />
+        </button>
       </section>
       <!-- PROJECTS END -->
     </main>

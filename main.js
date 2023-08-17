@@ -104,21 +104,11 @@ searchBar.addEventListener("keyup", (e) =>
 
 // MASONRY
 const masonryGridContainer = document.getElementById("masonryContainer");
-
-function createGallery(images, parentElement) {
-  images.forEach((image) => {
-    const imageElement = document.createElement("img");
-    imageElement.setAttribute("src", image);
-    parentElement.appendChild(imageElement);
-  });
-}
-
-window.addEventListener("DOMContentLoaded", () =>
-  createGallery(images, masonryGridContainer)
-);
-window.addEventListener("scroll", () => masonry.recalculate());
-
-// createGallery(images, masonryGridContainer);
+const moreImagesBtn = document.getElementById("generateMoreImagesBtn");
+moreImagesBtn.addEventListener("click", () => {
+  createGallery(images, masonryGridContainer);
+  masonry.recalculate();
+});
 
 const masonry = macy({
   container: masonryGridContainer,
@@ -134,6 +124,19 @@ const masonry = macy({
   },
 });
 
+function createGallery(images, parentElement) {
+  images.forEach((image) => {
+    const imageElement = document.createElement("img");
+    imageElement.setAttribute("src", image);
+    parentElement.appendChild(imageElement);
+  });
+}
+
+window.addEventListener("DOMContentLoaded", () =>
+  createGallery(images, masonryGridContainer)
+);
+window.addEventListener("scroll", () => masonry.recalculate());
+
 const images = [
   "/public/garden-photos/garden1.png",
   "/public/garden-photos/garden2.png",
@@ -142,6 +145,6 @@ const images = [
   "/public/garden-photos/garden5.png",
   "/public/garden-photos/garden6.png",
   "/public/garden-photos/garden7.png",
-  "https://cdn.pixabay.com/photo/2014/07/31/17/39/meadow-406514_1280.jpg",
-  "https://cdn.pixabay.com/photo/2016/10/18/20/46/tea-plantation-1751369_1280.jpg",
+  "/public/garden-photos/garden1.png",
+  "/public/garden-photos/garden2.png",
 ];

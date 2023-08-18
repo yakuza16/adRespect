@@ -9,3 +9,20 @@
     font-family: Inter;
   }
 }
+
+@media (min-width: 1024px) {
+  .custom-right {
+    right: calc(0px - 89px);
+  }
+
+  .customBeforeContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #dcc1ab;
+    left: calc(0px - 96px);
+    right: calc(0px - 64px);
+    z-index: -100;
+  }
+}

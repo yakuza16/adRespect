@@ -9,429 +9,447 @@
     </title>
   </head>
   <body>
-    <!-- TOP NAV START -->
-    <nav class="px-24 py-16 md:py-6">
-      <div
-        class="flex flex-col md:flex-row justify-between items-center space-y-5 md:space-y-0"
-      >
-        <div>
-          <img src="./public//logo.svg" alt="logo giarddesign" />
-        </div>
-        <ul
-          class="flex flex-col space-y-4 md:space-y-0 md:flex-row w-1/2 xl:w-1/3 justify-evenly items-center"
-        >
-          <li
-            id="offer-menu"
-            class="group relative order-last md:order-first my-8 md:my-0"
-          >
-            <button
-              class="flex items-center transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
-            >
-              Oferta
-              <span class="ml-2 group-hover:animate-bounce"
-                ><img src="./public/arrow-down.svg" alt="arrow down icon"
-              /></span>
-            </button>
-            <div
-              class="hidden absolute md:-left-8 z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button"
-              tabindex="-1"
-              id="offer-menu-list"
-            >
-              <div class="py-1 group">
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
-                  >Katalog</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
-                  >Ogrody</a
-                >
-                <a
-                  href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
-                  >Inne</a
-                >
-              </div>
-            </div>
-          </li>
-          <li>
-            <a
-              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
-              href="#"
-              >O firmie</a
-            >
-          </li>
-          <li>
-            <a
-              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
-              href="#"
-              >Realizacje</a
-            >
-          </li>
-          <li>
-            <a
-              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
-              href="#"
-              >Kontakt</a
-            >
-          </li>
-          <li class="flex items-center group relative">
-            <button id="searchLoup">
-              <img
-                class="group-hover:animate-bounce"
-                src="./public/search.svg"
-                alt="search icon"
-              />
-            </button>
-            <div
-              class="hidden absolute flex flex-col md:flex-row p-6 left-96 md:left-60 top-6 z-10 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="menu-button"
-              tabindex="-1"
-              id="search-input"
-            >
-              <input
-                class="mx-4 border-2 border-teal-400 p-2 rounded-md"
-                id="search"
-                type="text"
-                placeholder="Szukaj..."
-              />
-              <button id="search-btn" class="text-teal-800 font-bold">
-                Szukaj
-              </button>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- END NAV -->
-    <!-- HERO START -->
-    <header class="w-full">
-      <div class="flex flex-col lg:flex-row lg:h-[78vh]">
-        <!-- Left Section -->
-        <div
-          class="lg:w-1/2 bg-[#DCC1AB] p-24 md:p-48 flex flex-col justify-center space-x-4 space-y-6 md:space-y-14"
-        >
-          <h1
-            class="text-4xl md:text-5xl lg:text-6xl font-secondary font-bold mb-4"
-          >
-            Nowoczesna aranżacja Twojego ogrodu
-          </h1>
-          <p>
-            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-            podejściem do każdego projektu.
-          </p>
-          <div
-            class="flex w-full justify-center align-baseline space-x-4 items-stretch"
-          >
-            <a
-              href="#"
-              class="bg-[#1B5B31] rounded-3xl text-white p-6 flex items-center basis-3 lg:basis-full justify-center border-2 border-transparent transition duration-150 ease-out hover:bg-transparent hover:border-[#1B5B31] hover:text-[#1B5B31] hover:animate-pulse"
-              >Skontaktuj się z nami</a
-            >
-            <a
-              href="#"
-              class="flex bg-transparent rounded-3xl text-[#1B5B31] p-6 border-2 border-[#1B5B31] items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group hover:animate-none"
-              >Zobacz nasze realizacje
-              <img
-                class="ml-4 p-1 rounded-lg animate-bounce group-hover:bg-white"
-                src="./public/btn-vector.svg"
-                alt=""
-            /></a>
-          </div>
-        </div>
-
-        <!-- Right Section -->
-        <div class="lg:w-1/2 relative">
-          <img
-            class="object-cover w-full h-full filter blur-lg transition-all duration-1000 ease-linear"
-            src="./public//slider1.png"
-            alt=""
-            id="slider-image"
-          />
-
-          <!-- Slider Arrows -->
-          <div class="absolute bottom-0 right-0 flex">
-            <button id="prevSlideBtn" class="bg-white">
-              <img src="./public/left-arrow.svg" alt="" />
-            </button>
-            <button id="nextSlideBtn" class="bg-white">
-              <img src="./public/right-arrow.svg" alt="" />
-            </button>
-          </div>
-        </div>
-      </div>
-    </header>
-    <!-- HERO END -->
-    <main>
-      <!-- SECTION OFFER START -->
-      <section
-        class="flex flex-col justify-around bg-[#F5F0EC] p-12 lg:p-24 space-y-6 lg:space-y-16"
-      >
-        <div class="flex flex-col justify-center items-start w-full lg:pl-48">
-          <p class="text-xs text-[#1B5B31]">Oferta</p>
-          <h2 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
-            Działamy kompleksowo
-          </h2>
-          <p class="lg:w-1/2">
-            Oferujemy kompletną obsługę inwestycji terenów zielonych.
-            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
-            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
-            a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
-          </p>
-        </div>
-        <div
-          class="w-full flex flex-col lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline"
-        >
-          <div class="customCard">
-            <div
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="3500"
-              class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent transition hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
-            >
-              <div class="flex justify-start items-center mb-4">
-                <img src="./public/pen-icon.svg" />
-              </div>
-              <h3 class="text-xl lg:text-2xl font-semibold mb-2 font-secondary">
-                Projekty
-              </h3>
-              <p class="mb-2">
-                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-                wykorzystaniem istniejącej przestrzeni.
-              </p>
-              <a
-                href="#"
-                class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
-                >Dowiedz się więcej
-                <img
-                  class="transform -rotate-90 p-1 ml-2"
-                  src="./public/btn-vector.svg"
-                  alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="customCard">
-            <div
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="600"
-              class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent transition hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
-            >
-              <div class="flex justify-start items-center mb-4">
-                <img src="./public/eye-icon.svg" alt="eye icon" />
-              </div>
-              <h3 class="text-xl lg:text-2xl font-semibold mb-2 font-secondary">
-                Wizualizacje
-              </h3>
-              <p class="mb-2">
-                Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
-                spaceru animowanego w technologii 3D.
-              </p>
-              <a
-                href="#"
-                class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
-                >Dowiedz się więcej
-                <img
-                  class="transform -rotate-90 ml-2 p-1 group-hover:bg-white"
-                  src="./public/btn-vector.svg"
-                  alt=""
-              /></a>
-            </div>
-          </div>
-          <div class="customCard">
-            <div
-              data-aos="fade-up"
-              data-aos-easing="linear"
-              data-aos-duration="500"
-              class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
-            >
-              <div class="flex justify-start items-center mb-4">
-                <img src="./public/stars-icon.svg" alt="stars icon" />
-              </div>
-              <h3 class="text-xl lg:text-2xl font-semibold mb-2 font-secondary">
-                Realizacje
-              </h3>
-              <p class="mb-2">
-                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i
-                zaawansowanych technologii
-              </p>
-              <a
-                href="#"
-                class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
-                >Zobacz nasze realizacje
-                <img
-                  class="transform -rotate-90 p-1 ml-2"
-                  src="./public/btn-vector.svg"
-                  alt=""
-              /></a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- SECTION OFFER END -->
-      <!-- ABOUT COMPANY START -->
-      <section class="w-full text-white">
-        <div class="flex flex-col lg:flex-row lg:h-[60vh]">
-          <!-- Left Section -->
-          <div
-            class="lg:w-1/2 bg-[#1B5B31] p-24 md:p-48 flex flex-col justify-center space-x-4 space-y-6 md:space-y-14 peer order-last"
-          >
-            <div class="flex flex-col space-y-4">
-              <p
-                data-aos="fade-right"
-                data-aos-easing="linear"
-                data-aos-duration="12000"
-                class="text-xs"
-              >
-                O firmie
-              </p>
-              <h4
-                data-aos="fade-left"
-                data-aos-easing="linear"
-                data-aos-duration="3500"
-                class="text-4xl md:text-6xl font-secondary font-bold mb-4"
-              >
-                Tworzymy z pasją
-              </h4>
-              <p
-                data-aos="fade-up-left"
-                data-aos-easing="linear"
-                data-aos-duration="4500"
-              >
-                Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
-                wykwalifikowani projektanci oraz architekci, których zadaniem
-                jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
-                specjalizacja to przestrzenie nowoczesne, które charakteryzuje
-                minimalizm, geometria i elegancka prostota. Tworzymy ogrody
-                małoobsługowe, dostosowane do współczesnego trybu życia.
-              </p>
-            </div>
-            <div
-              data-aos="flip-up"
-              data-aos-easing="linear"
-              data-aos-duration="12000"
-              class="w-max"
-            >
-              <a
-                href="#"
-                class="group flex bg-transparent rounded-3xl p-6 border-2 border-white items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse group hover:animate-none hover:bg-black"
-                >Poznaj nas bliżej
-                <img
-                  class="ml-4 p-1 rounded-lg animate-shake group-hover:animate-none"
-                  src="./public/btn-vector-white.svg"
-                  alt=""
-              /></a>
-            </div>
-          </div>
-
-          <div
-            class="lg:w-1/2 peer-hover:filter peer-hover:blur-sm peer-hover:hue-rotate-60 transition-all duration-1000 ease-linear"
-          >
-            <img
-              class="object-cover w-full h-full transition-all duration-1000 ease-linear"
-              src="./garden.png"
-              alt="garden"
-            />
-          </div>
-          <!-- Right Section -->
-        </div>
-      </section>
-      <!-- ABOUT COMPANY END -->
-      <!-- PROJECTS START -->
-      <section class="bg-[#DCC1AB] space-y-6 lg:space-y-16 relative pb-24">
-        <div class="flex flex-col justify-center items-start w-full space-y-3">
-          <div class="pl-4 lg:pl-48 my-6 lg:my-24">
-            <p class="text-xs text-[#1B5B31]">Realizacje</p>
-            <h5 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
-              Nasze projekty
-            </h5>
-          </div>
-          <div id="masonryContainer" class="w-full"></div>
-        </div>
-        <button
-          id="generateMoreImagesBtn"
-          class="flex bg-transparent rounded-full px-4 text-black p-2 border-2 border-black items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group absolute bottom-5 left-1/2 transform -translate-x-1/2"
-        >
-          Rozwiń
-          <img
-            class="transform -rotate-90 ml-4 p-1 rounded-lg"
-            src="./public/left-arrow.svg"
-            alt=""
-          />
-        </button>
-      </section>
-      <!-- PROJECTS END -->
-    </main>
-    <div class="bg-white flex justify-center p-4 lg:px-24 py-12">
-      <div
-        class="w-full bg-[#1B5B31] text-white p-12 flex flex-col lg:flex-row items-center lg:justify-around lg:p-24 lg:w-2/3"
-      >
-        <div class="font-secondary text-md lg:text-[40px]">
-          <h6>Zostańmy w kontakcie!</h6>
-          <p>
-            Znajdziesz nas na <span class="font-bold italic">Instagramie</span>.
-          </p>
-        </div>
-        <div class="flex flex-col items-center justify-center p-8 lg:p-12">
-          <p class="text-center">Śledź nasze najnowsze realizacje!</p>
-          <button
-            class="bg-white rounded-3xl mt-12 text-[#1B5B31] p-4 border-2 basis-3 lg:basis-full transition duration-150 ease-out group hover:animate-none hover:bg-[#1B5B31] hover:text-white"
-          >
-            Instagram
-          </button>
-        </div>
-      </div>
-    </div>
-    <footer
-      class="bg-black text-white grid grid-cols-5 grid-rows-3 gap-4 p-12 lg:p-24"
+    <div
+      class="lg:mx-[89px] flex flex-col lg:grid lg:grid-cols-12 lg:gap-x-[64px]"
     >
-      <div class="col-span-2 flex items-stretch justify-center">
-        <div class="flex w-1/3 lg:w-1/6 pt-8">
-          <img class="" src="/public/logo-white.svg" alt="logo" />
-        </div>
-      </div>
-      <div class="col-span-2 col-start-4 self-center">
-        <div class="flex items-baseline space-x-3">
-          <p>Daj znać, co możemy dla Ciebie zrobić!</p>
-          <button
-            class="rounded-3xl mt-12 bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
+      <!-- TOP NAV START -->
+      <nav class="py-6 md:px-6 lg:col-span-12">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center space-y-5 md:space-y-0"
+        >
+          <div>
+            <img src="./public//logo.svg" alt="logo giarddesign" />
+          </div>
+          <ul
+            class="flex flex-col space-y-4 md:space-y-0 md:flex-row w-1/2 xl:w-1/3 justify-evenly items-center"
           >
-            Skontaktuj się z nami
-          </button>
-        </div>
-      </div>
-      <div class="col-span-2 row-start-2">
-        <div class="w-full">
-          <ul class="flex">
-            <li><a href="#">Kontakt</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Linkedin</a></li>
+            <li
+              id="offer-menu"
+              class="group relative order-last md:order-first my-8 md:my-0"
+            >
+              <button
+                class="flex items-center transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
+              >
+                Oferta
+                <span class="ml-2 group-hover:animate-bounce"
+                  ><img src="./public/arrow-down.svg" alt="arrow down icon"
+                /></span>
+              </button>
+              <div
+                class="hidden absolute md:-left-8 z-10 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+                id="offer-menu-list"
+              >
+                <div class="py-1 group">
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
+                    >Katalog</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
+                    >Ogrody</a
+                  >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
+                    >Inne</a
+                  >
+                </div>
+              </div>
+            </li>
+            <li>
+              <a
+                class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
+                href="#"
+                >O firmie</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
+                href="#"
+                >Realizacje</a
+              >
+            </li>
+            <li>
+              <a
+                class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
+                href="#"
+                >Kontakt</a
+              >
+            </li>
+            <li class="flex items-center group relative">
+              <button id="searchLoup">
+                <img
+                  class="group-hover:animate-bounce"
+                  src="./public/search.svg"
+                  alt="search icon"
+                />
+              </button>
+              <div
+                class="hidden absolute flex flex-col md:flex-row p-6 left-96 md:left-60 top-6 z-10 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                role="menu"
+                aria-orientation="vertical"
+                aria-labelledby="menu-button"
+                tabindex="-1"
+                id="search-input"
+              >
+                <input
+                  class="mx-4 border-2 border-teal-400 p-2 rounded-md"
+                  id="search"
+                  type="text"
+                  placeholder="Szukaj..."
+                />
+                <button id="search-btn" class="text-teal-800 font-bold">
+                  Szukaj
+                </button>
+              </div>
+            </li>
           </ul>
         </div>
-      </div>
-      <div class="col-span-2 col-start-4 row-start-2">
-        <a href="tel:000000000">000000000</a>
-        <a href="mailto:adres@email">giarddesign@kontakt.pl</a>
-      </div>
-      <div class="row-start-3"><p>Prawa zastrzeżone © 2022</p></div>
-      <div class="col-start-5 row-start-3">
-        <p class="flex">
-          made by
-          <span class="flex"
-            ><img src="/public/logo-full-light.png" alt="white logo"
-          /></span>
-        </p>
-      </div>
-    </footer>
+      </nav>
+      <!-- END NAV -->
+      <!-- HERO START -->
+      <header class="col-span-12">
+        <div
+          class="flex flex-col lg:grid lg:grid-cols-12 lg:gap-x-[64px] lg:h-[78vh] lg:relative"
+        >
+          <!-- Left Section -->
+          <div
+            class="bg-[#DCC1AB] p-24 flex flex-col justify-center space-x-4 space-y-6 md:p-48 md:space-y-14 lg:p-0 lg:col-span-6 lg:relative customBeforeContainer lg:grid lg:grid-cols-6 lg:gap-x-[64px] lg:items-center lg:content-center"
+          >
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-secondary font-bold mb-4 lg:mb-0 lg:col-span-5"
+            >
+              Nowoczesna aranżacja Twojego ogrodu
+            </h1>
+            <p class="lg:col-span-5">
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+            <div
+              class="flex w-full justify-center align-baseline space-x-4 items-stretch lg:col-span-5 lg:items-center"
+            >
+              <a
+                href="#"
+                class="bg-[#1B5B31] rounded-3xl lg:rounded-[200px] text-white p-6 flex items-center basis-3 lg:basis-full justify-center border-2 border-transparent transition duration-150 ease-out hover:bg-transparent hover:border-[#1B5B31] hover:text-[#1B5B31] hover:animate-pulse"
+                >Skontaktuj się z nami</a
+              >
+              <a
+                href="#"
+                class="flex bg-transparent rounded-3xl lg:rounded-[200px] text-[#1B5B31] p-6 border-2 border-[#1B5B31] items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group hover:animate-none"
+                >Zobacz nasze realizacje
+                <img
+                  class="ml-4 p-1 rounded-lg animate-bounce group-hover:bg-white"
+                  src="./public/btn-vector.svg"
+                  alt=""
+              /></a>
+            </div>
+          </div>
+
+          <!-- Right Section -->
+          <div
+            class="relative lg:absolute lg:left-1/2 lg:bottom-0 lg:top-0 custom-right"
+          >
+            <img
+              class="object-cover w-full h-full filter blur-lg transition-all duration-1000 ease-linear"
+              src="./public//slider1.png"
+              alt=""
+              id="slider-image"
+            />
+
+            <!-- Slider Arrows -->
+            <div class="absolute bottom-0 right-0 flex">
+              <button id="prevSlideBtn" class="bg-white">
+                <img src="./public/left-arrow.svg" alt="" />
+              </button>
+              <button id="nextSlideBtn" class="bg-white">
+                <img src="./public/right-arrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HERO END -->
+      <!-- <main> -->
+      <!-- SECTION OFFER START -->
+      <!-- <section
+          class="flex flex-col justify-around bg-[#F5F0EC] p-12 lg:p-24 space-y-6 lg:space-y-16"
+        >
+          <div class="flex flex-col justify-center items-start w-full lg:pl-48">
+            <p class="text-xs text-[#1B5B31]">Oferta</p>
+            <h2 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
+              Działamy kompleksowo
+            </h2>
+            <p class="lg:w-1/2">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+              Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
+              życie, a na każdym etapie posłużymy radą i wieloletnim
+              doświadczeniem.
+            </p>
+          </div>
+          <div
+            class="w-full flex flex-col lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline"
+          >
+            <div class="customCard">
+              <div
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="3500"
+                class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent transition hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
+              >
+                <div class="flex justify-start items-center mb-4">
+                  <img src="./public/pen-icon.svg" />
+                </div>
+                <h3
+                  class="text-xl lg:text-2xl font-semibold mb-2 font-secondary"
+                >
+                  Projekty
+                </h3>
+                <p class="mb-2">
+                  Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                  wykorzystaniem istniejącej przestrzeni.
+                </p>
+                <a
+                  href="#"
+                  class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
+                  >Dowiedz się więcej
+                  <img
+                    class="transform -rotate-90 p-1 ml-2"
+                    src="./public/btn-vector.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="customCard">
+              <div
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="600"
+                class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent transition hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
+              >
+                <div class="flex justify-start items-center mb-4">
+                  <img src="./public/eye-icon.svg" alt="eye icon" />
+                </div>
+                <h3
+                  class="text-xl lg:text-2xl font-semibold mb-2 font-secondary"
+                >
+                  Wizualizacje
+                </h3>
+                <p class="mb-2">
+                  Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego
+                  spaceru animowanego w technologii 3D.
+                </p>
+                <a
+                  href="#"
+                  class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
+                  >Dowiedz się więcej
+                  <img
+                    class="transform -rotate-90 ml-2 p-1 group-hover:bg-white"
+                    src="./public/btn-vector.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+            <div class="customCard">
+              <div
+                data-aos="fade-up"
+                data-aos-easing="linear"
+                data-aos-duration="500"
+                class="customCardContent group hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31]"
+              >
+                <div class="flex justify-start items-center mb-4">
+                  <img src="./public/stars-icon.svg" alt="stars icon" />
+                </div>
+                <h3
+                  class="text-xl lg:text-2xl font-semibold mb-2 font-secondary"
+                >
+                  Realizacje
+                </h3>
+                <p class="mb-2">
+                  Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań
+                  i zaawansowanych technologii
+                </p>
+                <a
+                  href="#"
+                  class="flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake"
+                  >Zobacz nasze realizacje
+                  <img
+                    class="transform -rotate-90 p-1 ml-2"
+                    src="./public/btn-vector.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section> -->
+      <!-- SECTION OFFER END -->
+      <!-- ABOUT COMPANY START -->
+      <!-- <section class="w-full text-white">
+          <div class="flex flex-col lg:flex-row lg:h-[60vh]"> -->
+      <!-- Left Section -->
+      <!-- <div
+              class="lg:w-1/2 bg-[#1B5B31] p-24 md:p-48 flex flex-col justify-center space-x-4 space-y-6 md:space-y-14 peer order-last"
+            >
+              <div class="flex flex-col space-y-4">
+                <p
+                  data-aos="fade-right"
+                  data-aos-easing="linear"
+                  data-aos-duration="12000"
+                  class="text-xs"
+                >
+                  O firmie
+                </p>
+                <h4
+                  data-aos="fade-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="3500"
+                  class="text-4xl md:text-6xl font-secondary font-bold mb-4"
+                >
+                  Tworzymy z pasją
+                </h4>
+                <p
+                  data-aos="fade-up-left"
+                  data-aos-easing="linear"
+                  data-aos-duration="4500"
+                >
+                  Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                  wykwalifikowani projektanci oraz architekci, których zadaniem
+                  jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                  specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                  minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                  małoobsługowe, dostosowane do współczesnego trybu życia.
+                </p>
+              </div>
+              <div
+                data-aos="flip-up"
+                data-aos-easing="linear"
+                data-aos-duration="12000"
+                class="w-max"
+              >
+                <a
+                  href="#"
+                  class="group flex bg-transparent rounded-3xl lg:rounded-[200px] p-6 border-2 border-white items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse group hover:animate-none hover:bg-black"
+                  >Poznaj nas bliżej
+                  <img
+                    class="ml-4 p-1 rounded-lg animate-shake group-hover:animate-none"
+                    src="./public/btn-vector-white.svg"
+                    alt=""
+                /></a>
+              </div>
+            </div>
+
+            <div
+              class="lg:w-1/2 peer-hover:filter peer-hover:blur-sm peer-hover:hue-rotate-60 transition-all duration-1000 ease-linear"
+            >
+              <img
+                class="object-cover w-full h-full transition-all duration-1000 ease-linear"
+                src="./garden.png"
+                alt="garden"
+              />
+            </div> -->
+      <!-- Right Section -->
+      <!-- </div>
+        </section> -->
+      <!-- ABOUT COMPANY END -->
+      <!-- PROJECTS START -->
+      <!-- <section class="bg-[#DCC1AB] space-y-6 lg:space-y-16 relative pb-24">
+          <div
+            class="flex flex-col justify-center items-start w-full space-y-3"
+          >
+            <div class="pl-4 lg:pl-48 my-6 lg:my-24">
+              <p class="text-xs text-[#1B5B31]">Realizacje</p>
+              <h5 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
+                Nasze projekty
+              </h5>
+            </div>
+            <div id="masonryContainer" class="w-full"></div>
+          </div>
+          <button
+            id="generateMoreImagesBtn"
+            class="flex bg-transparent rounded-3xl lg:rounded-[200px] px-4 text-black p-2 border-2 border-black items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group absolute bottom-5 left-1/2 transform -translate-x-1/2"
+          >
+            Rozwiń
+            <img
+              class="transform -rotate-90 ml-4 p-1 rounded-lg"
+              src="./public/left-arrow.svg"
+              alt=""
+            />
+          </button>
+        </section> -->
+      <!-- PROJECTS END -->
+      <!-- </main> -->
+      <!-- <div class="bg-white flex justify-center p-4 lg:px-24 py-12">
+        <div
+          class="w-full bg-[#1B5B31] text-white p-12 flex flex-col lg:flex-row items-center lg:justify-around lg:p-24 lg:w-2/3"
+        >
+          <div class="font-secondary text-md lg:text-[40px]">
+            <h6>Zostańmy w kontakcie!</h6>
+            <p>
+              Znajdziesz nas na
+              <span class="font-bold italic">Instagramie</span>.
+            </p>
+          </div>
+          <div class="flex flex-col items-center justify-center p-8 lg:p-12">
+            <p class="text-center">Śledź nasze najnowsze realizacje!</p>
+            <button
+              class="bg-white rounded-3xl lg:rounded-[200px] mt-12 text-[#1B5B31] p-4 border-2 basis-3 lg:basis-full transition duration-150 ease-out group hover:animate-none hover:bg-[#1B5B31] hover:text-white"
+            >
+              Instagram
+            </button>
+          </div>
+        </div>
+      </div> -->
+      <!-- <footer
+        class="bg-black text-white grid grid-cols-5 grid-rows-3 gap-4 p-12 lg:p-24"
+      >
+        <div class="col-span-2 flex items-stretch justify-center">
+          <div class="flex w-1/3 lg:w-1/6 pt-8">
+            <img class="" src="/public/logo-white.svg" alt="logo" />
+          </div>
+        </div>
+        <div class="col-span-2 col-start-4 self-center">
+          <div class="flex items-baseline space-x-3">
+            <p>Daj znać, co możemy dla Ciebie zrobić!</p>
+            <button
+              class="rounded-3xl lg:rounded-[200px] mt-12 bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
+            >
+              Skontaktuj się z nami
+            </button>
+          </div>
+        </div>
+        <div class="col-span-2 row-start-2">
+          <div class="w-full">
+            <ul class="flex">
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">Instagram</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Linkedin</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-span-2 col-start-4 row-start-2">
+          <a href="tel:000000000">000000000</a>
+          <a href="mailto:adres@email">giarddesign@kontakt.pl</a>
+        </div>
+        <div class="row-start-3"><p>Prawa zastrzeżone © 2022</p></div>
+        <div class="col-start-5 row-start-3">
+          <p class="flex">
+            made by
+            <span class="flex"
+              ><img src="/public/logo-full-light.png" alt="white logo"
+            /></span>
+          </p>
+        </div>
+      </footer> -->
+    </div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/gallery.js"></script>
   </body>

@@ -25,4 +25,15 @@
     right: calc(0px - 64px);
     z-index: -100;
   }
+
+  .customBeforeContainerOfferSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #f5f0ec;
+    left: calc(0px - 96px);
+    right: calc(0px - 96px);
+    z-index: -100;
+  }
 }

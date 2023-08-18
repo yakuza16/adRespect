@@ -25,7 +25,7 @@
             class="group relative order-last md:order-first my-8 md:my-0"
           >
             <button
-              class="flex items-center transition-colors ease-in-out duration-200 group-hover:text-teal-400"
+              class="flex items-center transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
             >
               Oferta
               <span class="ml-2 group-hover:animate-bounce"
@@ -43,17 +43,17 @@
               <div class="py-1 group">
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-teal-400"
+                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
                   >Katalog</a
                 >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-teal-600"
+                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
                   >Ogrody</a
                 >
                 <a
                   href="#"
-                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-teal-800"
+                  class="block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31]"
                   >Inne</a
                 >
               </div>
@@ -61,21 +61,21 @@
           </li>
           <li>
             <a
-              class="transition-colors ease-in-out duration-200 hover:text-teal-600"
+              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
               href="#"
               >O firmie</a
             >
           </li>
           <li>
             <a
-              class="transition-colors ease-in-out duration-200 hover:text-teal-800"
+              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
               href="#"
               >Realizacje</a
             >
           </li>
           <li>
             <a
-              class="transition-colors ease-in-out duration-200 hover:text-teal-900"
+              class="transition-colors ease-in-out duration-200 hover:text-[#1B5B31]"
               href="#"
               >Kontakt</a
             >
@@ -370,23 +370,68 @@
       </section>
       <!-- PROJECTS END -->
     </main>
-    <div class="bg-white flex justify-center px-24 py-12">
-      <div class="w-2/3 bg-[#1B5B31] flex justify-around text-white p-24">
-        <div class="font-secondary text-[40px]">
+    <div class="bg-white flex justify-center p-4 lg:px-24 py-12">
+      <div
+        class="w-full bg-[#1B5B31] text-white p-12 flex flex-col lg:flex-row items-center lg:justify-around lg:p-24 lg:w-2/3"
+      >
+        <div class="font-secondary text-md lg:text-[40px]">
           <h6>Zostańmy w kontakcie!</h6>
-          <p>Znajdziesz nas na <span class="font-bold">Instagramie</span>.</p>
+          <p>
+            Znajdziesz nas na <span class="font-bold italic">Instagramie</span>.
+          </p>
         </div>
-        <div class="flex flex-col items-start justify-center p-12">
-          <p class="">Śledź nasze najnowsze realizacje!</p>
+        <div class="flex flex-col items-center justify-center p-8 lg:p-12">
+          <p class="text-center">Śledź nasze najnowsze realizacje!</p>
           <button
-            class="bg-white rounded-3xl mt-12 text-[#1B5B31] p-4 border-2 items-center basis-3 lg:basis-full justify-center transition duration-150 ease-out group hover:animate-none hover:bg-[#1B5B31] hover:text-white"
+            class="bg-white rounded-3xl mt-12 text-[#1B5B31] p-4 border-2 basis-3 lg:basis-full transition duration-150 ease-out group hover:animate-none hover:bg-[#1B5B31] hover:text-white"
           >
             Instagram
           </button>
         </div>
       </div>
     </div>
-    <footer></footer>
+    <footer
+      class="bg-black text-white grid grid-cols-5 grid-rows-3 gap-4 p-12 lg:p-24"
+    >
+      <div class="col-span-2 flex items-stretch justify-center">
+        <div class="flex w-1/3 lg:w-1/6 pt-8">
+          <img class="" src="/public/logo-white.svg" alt="logo" />
+        </div>
+      </div>
+      <div class="col-span-2 col-start-4 self-center">
+        <div class="flex items-baseline space-x-3">
+          <p>Daj znać, co możemy dla Ciebie zrobić!</p>
+          <button
+            class="rounded-3xl mt-12 bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
+          >
+            Skontaktuj się z nami
+          </button>
+        </div>
+      </div>
+      <div class="col-span-2 row-start-2">
+        <div class="w-full">
+          <ul class="flex">
+            <li><a href="#">Kontakt</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Linkedin</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-span-2 col-start-4 row-start-2">
+        <a href="tel:000000000">000000000</a>
+        <a href="mailto:adres@email">giarddesign@kontakt.pl</a>
+      </div>
+      <div class="row-start-3"><p>Prawa zastrzeżone © 2022</p></div>
+      <div class="col-start-5 row-start-3">
+        <p class="flex">
+          made by
+          <span class="flex"
+            ><img src="/public/logo-full-light.png" alt="white logo"
+          /></span>
+        </p>
+      </div>
+    </footer>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/gallery.js"></script>
   </body>

@@ -10,6 +10,12 @@
   }
 }
 
+@layer components {
+  .custom-tvelveColumnsGrid {
+    @apply grid grid-cols-12 gap-x-[64px];
+  }
+}
+
 @media (min-width: 1024px) {
   .custom-right {
     right: calc(0px - 89px);

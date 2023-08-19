@@ -45,3 +45,4 @@ window.addEventListener("DOMContentLoaded", () =>
   createGallery(imagesPath, masonryGridContainer)
 );
 window.addEventListener("scroll", () => masonry.recalculate());
+window.addEventListener("touchmove", () => masonry.recalculate());

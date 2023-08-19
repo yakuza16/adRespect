@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="strona o ogrodach" />
+
     <title>
       Rekrutacja Front-End Developer Etap 2 - adRespect Marcin Spławiński
     </title>
   </head>
-  <body class="">
-    <div class="lg:mx-[89px] flex flex-col custom-tvelveColumnsGrid">
+  <body class="overflow-x-hidden">
+    <div class="flex flex-col custom-tvelveColumnsGrid">
       <!-- TOP NAV START -->
-      <nav class="py-6 md:px-6 lg:col-span-12">
+      <nav class="lg:mx-[89px] py-6 md:px-6 lg:col-span-12">
         <div
           class="flex flex-col md:flex-row justify-between items-center space-y-5 md:space-y-0"
         >
@@ -113,7 +115,7 @@
       </nav>
       <!-- END NAV -->
       <!-- HERO START -->
-      <header class="col-span-12">
+      <header class="lg:mx-[89px] col-span-12">
         <div
           class="flex flex-col lg:custom-tvelveColumnsGrid lg:h-[78vh] lg:relative"
         >
@@ -173,10 +175,12 @@
         </div>
       </header>
       <!-- HERO END -->
-      <main class="lg:col-span-12 lg:custom-tvelveColumnsGrid lg:h-[78vh]">
+      <main
+        class="lg:col-span-12 lg:custom-tvelveColumnsGrid lg:h-[78vh] bg-[#F5F0EC]"
+      >
         <!-- SECTION OFFER START -->
         <section
-          class="flex flex-col justify-around bg-[#F5F0EC] p-12 lg:py-24 space-y-6 lg:space-y-16 lg:col-span-12 lg:custom-tvelveColumnsGrid lg:relative customBeforeContainerOfferSection"
+          class="flex flex-col justify-around bg-[#F5F0EC] p-12 lg:mx-[89px] lg:py-24 space-y-6 lg:space-y-16 lg:col-span-12 lg:custom-tvelveColumnsGrid"
         >
           <div
             class="flex flex-col justify-center items-start w-full lg:col-start-2 lg:col-end-9 lg:space-y-7"
@@ -194,9 +198,9 @@
             </p>
           </div>
           <div
-            class="w-full flex flex-col lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline lg:col-span-12 lg:custom-tvelveColumnsGrid"
+            class="w-full flex flex-col lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline lg:justify-around lg:col-span-12"
           >
-            <div class="customCard lg:col-start-1 lg:col-end-5">
+            <div class="customCard">
               <div
                 data-aos="fade-up"
                 data-aos-easing="linear"
@@ -226,7 +230,7 @@
                 /></a>
               </div>
             </div>
-            <div class="customCard lg:col-start-5 lg:col-end-9">
+            <div class="customCard">
               <div
                 data-aos="fade-up"
                 data-aos-easing="linear"
@@ -256,7 +260,7 @@
                 /></a>
               </div>
             </div>
-            <div class="customCard lg:col-start-9 lg:col-end-13">
+            <div class="customCard">
               <div
                 data-aos="fade-up"
                 data-aos-easing="linear"
@@ -291,7 +295,7 @@
         <!-- SECTION OFFER END -->
         <!-- ABOUT COMPANY START -->
         <section
-          class="w-full text-white lg:col-span-12 lg:custom-tvelveColumnsGrid lg:h-[78vh]"
+          class="w-full text-white lg:col-span-12 lg:mx-[89px] lg:custom-tvelveColumnsGrid lg:h-[78vh]"
         >
           <div
             class="flex flex-col lg:col-span-12 lg:custom-tvelveColumnsGrid lg:relative"
@@ -421,50 +425,67 @@
             </div>
           </div>
         </div>
-      </main>
+        <footer
+          class="bg-black text-white lg:col-span-12 lg:custom-tvelveColumnsGrid"
+        >
+          <div
+            class="flex lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 border-b-2 border-b-white pb-8 mt-24"
+          >
+            <div class="flex">
+              <img
+                class="w-full h-ful"
+                src="/public/logo-white.svg"
+                alt="logo"
+              />
+            </div>
+            <div class="flex items-start space-x-4">
+              <p class="self-center">Daj znać, co możemy dla Ciebie zrobić!</p>
+              <button
+                class="rounded-3xl lg:rounded-[200px] bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
+              >
+                Skontaktuj się z nami
+              </button>
+            </div>
+          </div>
+          <div
+            class="flex lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 pt-8"
+          >
+            <div class="flex">
+              <ul class="flex space-x-4 lg:space-x-8">
+                <li><a href="#">Kontakt</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Linkedin</a></li>
+              </ul>
+            </div>
+            <div class="flex items-start space-x-4">
+              <a href="tel:000000000" class="self-center">000-000-000</a>
+              <a href="mailto:adres@email" class="self-center"
+                >giarddesign@kontakt.pl</a
+              >
+            </div>
+          </div>
 
-      <!-- <footer
-        class="bg-black text-white grid grid-cols-5 grid-rows-3 gap-4 p-12 lg:p-24"
-      >
-        <div class="col-span-2 flex items-stretch justify-center">
-          <div class="flex w-1/3 lg:w-1/6 pt-8">
-            <img class="" src="/public/logo-white.svg" alt="logo" />
+          <div
+            class="flex lg:mx-[89px] mt-16 lg:col-start-2 justify-between lg:col-end-11 pb-20"
+          >
+            <div class="flex items-start space-x-3">
+              <p class="self-center">Prawa zastrzeżone © 2022</p>
+            </div>
+
+            <div class="flex space-x-4">
+              <span>made by</span>
+              <div>
+                <img
+                  class="w-full h-ful"
+                  src="/public/logo-full-light.png"
+                  alt="logo"
+                />
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="col-span-2 col-start-4 self-center">
-          <div class="flex items-baseline space-x-3">
-            <p>Daj znać, co możemy dla Ciebie zrobić!</p>
-            <button
-              class="rounded-3xl lg:rounded-[200px] mt-12 bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
-            >
-              Skontaktuj się z nami
-            </button>
-          </div>
-        </div>
-        <div class="col-span-2 row-start-2">
-          <div class="w-full">
-            <ul class="flex">
-              <li><a href="#">Kontakt</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Linkedin</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-span-2 col-start-4 row-start-2">
-          <a href="tel:000000000">000000000</a>
-          <a href="mailto:adres@email">giarddesign@kontakt.pl</a>
-        </div>
-        <div class="row-start-3"><p>Prawa zastrzeżone © 2022</p></div>
-        <div class="col-start-5 row-start-3">
-          <p class="flex">
-            made by
-            <span class="flex"
-              ><img src="/public/logo-full-light.png" alt="white logo"
-            /></span>
-          </p>
-        </div>
-      </footer> -->
+        </footer>
+      </main>
     </div>
     <script type="module" src="/main.js"></script>
     <script type="module" src="/gallery.js"></script>

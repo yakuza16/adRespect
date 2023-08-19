@@ -21,6 +21,10 @@
     right: calc(0px - 89px);
   }
 
+  .custom-left {
+    left: calc(0px - 89px);
+  }
+
   .customBeforeContainer::before {
     content: "";
     position: absolute;
@@ -29,6 +33,17 @@
     background-color: #dcc1ab;
     left: calc(0px - 96px);
     right: calc(0px - 64px);
+    z-index: -100;
+  }
+
+  .customBeforeContainerAboutCompany::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #1b5b31;
+    left: calc(0px - 64px);
+    right: calc(0px - 96px);
     z-index: -100;
   }
 
@@ -41,5 +56,8 @@
     left: calc(0px - 96px);
     right: calc(0px - 96px);
     z-index: -100;
+  }
+  .filterEffect {
+    filter: blur(5px) hue-rotate(60deg);
   }
 }

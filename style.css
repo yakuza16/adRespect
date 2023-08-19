@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;600&display=swap");
 
+:root {
+  --globalMarginX: 89px;
+  --globalGridColumnGutter: 64px;
+  --globalHalfGridColumnGutter: calc(var(--globalGridColumnGutter) / 2);
+  --globalGridColumnGutterPlusHalf: calc(
+    var(--globalGridColumnGutter) + var(--globalHalfGridColumnGutter)
+  );
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,11 +27,12 @@
 
 @media (min-width: 1024px) {
   .custom-right {
-    right: calc(0px - 89px);
+    right: calc(0px - var(--globalMarginX));
+    left: calc(50% + var(--globalHalfGridColumnGutter));
   }
 
   .custom-left {
-    left: calc(0px - 89px);
+    left: calc(0px - var(--globalMarginX));
   }
 
   .customBeforeContainer::before {
@@ -31,8 +41,8 @@
     top: 0;
     bottom: 0;
     background-color: #dcc1ab;
-    left: calc(0px - 96px);
-    right: calc(0px - 64px);
+    left: calc(0px - var(--globalGridColumnGutterPlusHalf));
+    right: calc(0px - var(--globalGridColumnGutter));
     z-index: -100;
   }
 
@@ -42,8 +52,8 @@
     top: 0;
     bottom: 0;
     background-color: #1b5b31;
-    left: calc(0px - 64px);
-    right: calc(0px - 96px);
+    left: calc(0px - var(--globalGridColumnGutter));
+    right: calc(0px - var(--globalGridColumnGutterPlusHalf));
     z-index: -100;
   }
 
@@ -53,8 +63,8 @@
     top: 0;
     bottom: 0;
     background-color: #f5f0ec;
-    left: calc(0px - 96px);
-    right: calc(0px - 96px);
+    left: calc(0px - var(--globalGridColumnGutterPlusHalf));
+    right: calc(0px - var(--globalGridColumnGutterPlusHalf));
     z-index: -100;
   }
   .filterEffect {

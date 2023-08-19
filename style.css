@@ -42,7 +42,7 @@
     bottom: 0;
     background-color: #dcc1ab;
     left: calc(0px - var(--globalGridColumnGutterPlusHalf));
-    right: calc(0px - var(--globalGridColumnGutter));
+    right: calc(0px - var(--globalMarginX));
     z-index: -100;
   }
 
@@ -67,6 +67,7 @@
     right: calc(0px - var(--globalGridColumnGutterPlusHalf));
     z-index: -100;
   }
+
   .filterEffect {
     filter: blur(5px) hue-rotate(60deg);
   }

@@ -1,7 +1,11 @@
 import macy from "macy";
 import imagesPath from "./imagesPaths";
+const closeModalButton = document.getElementById("closeModalButton");
 const masonryGridContainer = document.getElementById("masonryContainer");
 const moreImagesBtn = document.getElementById("generateMoreImagesBtn");
+const myModal = document.getElementById("myModal");
+const modalImage = document.getElementById("modalImage");
+const galleryBtns = document.querySelectorAll(".galleryBtn");
 
 const masonry = macy({
   container: masonryGridContainer,
@@ -21,9 +25,30 @@ function createGallery(images, parentElement) {
   images.forEach((image) => {
     const imageElement = document.createElement("img");
     imageElement.setAttribute("src", image);
+    imageElement.classList.add("masonryChild");
     parentElement.appendChild(imageElement);
   });
+  const allMasonryItems = document.querySelectorAll(".masonryChild");
+  allMasonryItems.forEach((image) => {
+    image.addEventListener("click", () => {
+      myModal.showModal();
+      myModal.classList.add("overlay");
+      modalImage.src = image.src;
+    });
+  });
 }
+
+function generateRandomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+galleryBtns.forEach((button) =>
+  button.addEventListener("click", () => {
+    const randomNum = generateRandomNumber(0, imagesPath.length);
+    modalImage.src = imagesPath[randomNum];
+  })
+);
+
 moreImagesBtn.addEventListener("click", () => {
   createGallery(imagesPath, masonryGridContainer);
   masonry.recalculate();
@@ -34,3 +59,8 @@ window.addEventListener("DOMContentLoaded", () =>
 );
 window.addEventListener("scroll", () => masonry.recalculate());
 window.addEventListener("touchmove", () => masonry.recalculate());
+
+closeModalButton.addEventListener("click", () => {
+  myModal.classList.remove("overlay");
+  myModal.close();
+});

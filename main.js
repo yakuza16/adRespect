@@ -11,9 +11,6 @@ const searchLoupBtn = document.getElementById("searchLoup");
 const searchInput = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-btn");
 const searchBar = document.getElementById("search");
-const sliderImg = document.getElementById("slider-image");
-const prevSlideBtn = document.getElementById("prevSlideBtn");
-const nextSlideBtn = document.getElementById("nextSlideBtn");
 const customSiblingFilteredElement = document.getElementById(
   "customSiblingFilteredElement"
 );
@@ -53,14 +50,6 @@ function initializeCardsAnimation() {
 }
 
 window.addEventListener("DOMContentLoaded", initializeCardsAnimation);
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 5) {
-    sliderImg.classList.remove("blur-lg");
-  } else if (window.scrollY <= 5) {
-    sliderImg.classList.add("blur-lg");
-  }
-});
 
 offerMenu.addEventListener("mouseover", () =>
   offerMenuList.classList.remove("hidden")

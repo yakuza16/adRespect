@@ -154,11 +154,12 @@
           </div>
 
           <!-- Right Section -->
-          <div class="relative lg:absolute lg:bottom-0 lg:top-0 custom-right">
+          <div
+            class="relative h-96 lg:h-full lg:absolute lg:bottom-0 lg:top-0 custom-right"
+          >
             <img
-              class="object-cover w-full h-full filter blur-lg transition-all duration-1000 ease-linear"
-              src="./public//slider1.png"
-              alt=""
+              class="object-fill lg:object-cover w-full h-full filter blur-lg transition-all duration-1000 ease-linear"
+              alt="slider image of gardens"
               id="slider-image"
             />
 
@@ -426,7 +427,7 @@
           </div>
         </div>
         <footer
-          class="text-xs lg:text-base bg-black px-4 lg:px-0 text-white lg:col-span-12 flex flex-col lg:custom-tvelveColumnsGrid"
+          class="text-xs lg:text-base bg-black px-8 lg:px-0 text-white lg:col-span-12 flex flex-col items-center lg:custom-tvelveColumnsGrid"
         >
           <div
             class="flex lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 border-b-2 border-b-white pb-12 mt-24"
@@ -438,7 +439,7 @@
                 alt="logo"
               />
             </div>
-            <div class="flex items-start space-x-4">
+            <div class="hidden lg:flex items-start space-x-4">
               <p class="self-center">Daj znać, co możemy dla Ciebie zrobić!</p>
               <button
                 class="hidden lg:block rounded-3xl lg:rounded-[200px] bg-[#1B5B31] p-4 transition duration-150 ease-out group hover:animate-none hover:bg-white hover:text-[#1B5B31]"
@@ -448,11 +449,11 @@
             </div>
           </div>
           <div
-            class="flex lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 pt-12"
+            class="flex lg:mx-[89px] lg:col-start-2 space-x-6 lg:space-x-0 justify-between lg:col-end-11 pt-12"
           >
-            <div class="flex">
+            <div class="flex lg:place-self-start">
               <ul
-                class="flex flex-col space-y-4 text-center lg:flex-row space-x-2 lg:space-x-8"
+                class="flex flex-col space-y-4 lg:flex-row lg:place-items-baseline lg:space-x-7"
               >
                 <li><a href="#">Kontakt</a></li>
                 <li><a href="#">Instagram</a></li>
@@ -469,7 +470,7 @@
           </div>
 
           <div
-            class="flex lg:mx-[89px] mt-16 lg:col-start-2 justify-between lg:col-end-11 pb-20"
+            class="flex flex-col items-center lg:flex-row lg:mx-[89px] mt-16 lg:col-start-2 lg:justify-between lg:col-end-11 pb-20"
           >
             <div class="flex items-start space-x-3">
               <p class="self-center">Prawa zastrzeżone © 2022</p>
@@ -489,7 +490,8 @@
         </footer>
       </main>
     </div>
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="/gallery.js"></script>
+    <script defer type="module" src="/main.js"></script>
+    <script defer type="module" src="/slider.js"></script>
+    <script defer type="module" src="/gallery.js"></script>
   </body>
 </html>

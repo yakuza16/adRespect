@@ -68,19 +68,19 @@ function hideSearchBar() {
   searchBar.value = "";
   anime({
     targets: searchInput,
-    translateX: 550,
+    translateY: -300,
     easing: "linear",
   });
-  setTimeout(() => searchInput.classList.add("hidden"), 400);
+  setTimeout(() => searchInput.classList.toggle("hidden"), 2000);
   isSearchBarOpen = false;
 }
 
 searchLoupBtn.addEventListener("click", () => {
   if (!isSearchBarOpen) {
-    searchInput.classList.remove("hidden");
+    searchInput.classList.toggle("hidden");
     anime({
       targets: searchInput,
-      translateX: -550,
+      translateY: 80,
       easing: "easeInOutSine",
     });
     isSearchBarOpen = !isSearchBarOpen;

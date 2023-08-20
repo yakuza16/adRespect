@@ -3,7 +3,7 @@ import imagesPath from "./imagesPaths";
 const closeModalButton = document.getElementById("closeModalButton");
 const masonryGridContainer = document.getElementById("masonryContainer");
 const moreImagesBtn = document.getElementById("generateMoreImagesBtn");
-const myModal = document.getElementById("myModal");
+const galleryModal = document.getElementById("galleryModal");
 const modalImage = document.getElementById("modalImage");
 const galleryBtns = document.querySelectorAll(".galleryBtn");
 
@@ -31,8 +31,8 @@ function createGallery(images, parentElement) {
   const allMasonryItems = document.querySelectorAll(".masonryChild");
   allMasonryItems.forEach((image) => {
     image.addEventListener("click", () => {
-      myModal.showModal();
-      myModal.classList.add("overlay");
+      galleryModal.showModal();
+      galleryModal.classList.add("overlay");
       modalImage.src = image.src;
     });
   });
@@ -44,7 +44,7 @@ function generateRandomNumber(min, max) {
 
 galleryBtns.forEach((button) =>
   button.addEventListener("click", () => {
-    const randomNum = generateRandomNumber(0, imagesPath.length);
+    const randomNum = generateRandomNumber(0, imagesPath.length - 1);
     modalImage.src = imagesPath[randomNum];
   })
 );
@@ -61,6 +61,6 @@ window.addEventListener("scroll", () => masonry.recalculate());
 window.addEventListener("touchmove", () => masonry.recalculate());
 
 closeModalButton.addEventListener("click", () => {
-  myModal.classList.remove("overlay");
-  myModal.close();
+  galleryModal.classList.remove("overlay");
+  galleryModal.close();
 });

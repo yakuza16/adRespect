@@ -25,6 +25,34 @@
   .custom-tvelveColumnsGrid {
     @apply grid grid-cols-12 gap-x-[64px];
   }
+
+  .custom-navMenuItems {
+    @apply transition-colors ease-in-out duration-200 hover:text-[#1B5B31];
+  }
+
+  .custom-navOfferMenuItems {
+    @apply block px-4 py-2 text-sm transition-colors ease-in-out duration-200 group-hover:text-[#1B5B31];
+  }
+
+  .custom-cardContentGlobal {
+    @apply hover:transition-all bg-white rounded-2xl p-6 lg:p-14 lg:space-y-6 w-80 border-2 border-transparent transition hover:border-[#1B5B31] lg:hover:shadow-2xl lg:hover:shadow-[#1B5B31];
+  }
+
+  .custom-cardImage {
+    @apply flex justify-start items-center mb-4;
+  }
+
+  .custom-cardHeading {
+    @apply text-xl lg:text-2xl font-semibold mb-2 font-secondary;
+  }
+
+  .custom-cardLink {
+    @apply flex text-[#1B5B31] border-b-2 border-b-[#1B5B31] w-2/3 lg:w-5/6 group-hover:animate-shake;
+  }
+
+  .custom-cardLinkVector {
+    @apply transform -rotate-90 p-1 ml-2;
+  }
 }
 
 .overlay {
@@ -71,17 +99,6 @@
     right: calc(0px - var(--globalGridColumnGutterPlusHalf));
     z-index: -100;
   }
-
-  /* .customBeforeContainerOfferSection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    background-color: #f5f0ec;
-    left: calc(0px - var(--globalGridColumnGutterPlusHalf));
-    right: calc(0px - var(--globalGridColumnGutterPlusHalf));
-    z-index: -100;
-  } */
 
   .filterEffect {
     filter: blur(5px) hue-rotate(60deg);

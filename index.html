@@ -98,7 +98,7 @@
         >
           <!-- Left Section -->
           <div
-            class="bg-[#DCC1AB] p-24 flex flex-col justify-center space-x-4 space-y-6 md:p-48 md:space-y-14 lg:p-0 lg:col-span-6 lg:relative customBeforeContainer lg:grid lg:grid-cols-6 lg:gap-x-[64px] lg:items-center lg:content-center"
+            class="bg-[#DCC1AB] p-24 flex flex-col justify-center space-x-4 space-y-6 md:p-32 md:space-y-12 lg:p-0 lg:col-span-6 lg:relative customBeforeContainer lg:grid lg:grid-cols-6 lg:gap-x-[64px] lg:items-center lg:content-center"
           >
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-secondary font-bold mb-4 lg:mb-0 lg:col-span-5"
@@ -111,7 +111,7 @@
               podejściem do każdego projektu.
             </p>
             <div
-              class="flex w-full justify-center align-baseline space-x-4 items-stretch lg:col-span-5 lg:items-center"
+              class="flex w-full justify-center align-baseline text-sm space-x-4 items-stretch lg:col-span-5 lg:items-center"
             >
               <a
                 href="#"
@@ -120,7 +120,7 @@
               >
               <a
                 href="#realizations"
-                class="flex bg-transparent rounded-3xl lg:rounded-[200px] text-[#1B5B31] p-6 border-2 border-[#1B5B31] items-center basis-1 lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group hover:animate-none"
+                class="flex bg-transparent rounded-3xl lg:rounded-[200px] text-[#1B5B31] p-6 border-2 border-[#1B5B31] items-center basis-1 md: lg:basis-full justify-center transition duration-150 ease-out animate-pulse hover:bg-[#1B5B31] hover:text-white group hover:animate-none"
                 >Zobacz nasze realizacje
                 <img
                   class="hidden lg:block ml-4 p-1 rounded-lg animate-bounce group-hover:bg-white"
@@ -181,7 +181,7 @@
             </p>
           </div>
           <div
-            class="w-full flex flex-col lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline lg:justify-around lg:col-span-12"
+            class="w-full flex flex-col md:flex-row md:flex-wrap md:space-x-2 md:items-baseline lg:flex-row space-y-4 lg:space-x-12 justify-center items-center lg:items-baseline lg:justify-around lg:col-span-12"
           >
             <div class="customCard">
               <div
@@ -264,13 +264,13 @@
           class="w-full text-white lg:col-span-12 lg:mx-[89px] lg:custom-tvelveColumnsGrid lg:h-[78vh]"
         >
           <div
-            class="flex flex-col lg:col-span-12 lg:custom-tvelveColumnsGrid lg:relative"
+            class="flex flex-col md:flex-row md:flex-wrap lg:col-span-12 lg:custom-tvelveColumnsGrid lg:relative"
           >
             <!-- Left Section -->
 
             <div
-              class="transition-all duration-1000 ease-linear lg:absolute lg:right-1/2 lg:bottom-0 lg:top-0 custom-left"
-              id="customFilteredElement"
+              class="transition-all md:mx-auto md:transform md:scale-50 lg:scale-100 duration-1000 ease-linear lg:absolute lg:right-1/2 lg:bottom-0 lg:top-0 custom-left"
+              id="customFilteredElement "
             >
               <img
                 class="object-cover w-full h-full transition-all duration-1000 ease-linear"
@@ -357,7 +357,7 @@
               <h5 class="text-3xl md:text-5xl font-secondary font-bold mb-4">
                 Nasze
                 <span
-                  class="italic custom-textDecoration group-hover:decoration-[#1B5B31]"
+                  class="px-2 italic custom-textDecoration group-hover:decoration-[#1B5B31] group-hover:bg-white group-hover:rounded-lg group-hover:text-[#1b5b31]"
                   >projekty</span
                 >
               </h5>
@@ -378,6 +378,9 @@
         </section>
         <!-- PROJECTS END -->
         <div
+          data-aos="zoom-in-up"
+          data-aos-easing="ease-in-sine"
+          data-aos-duration="3000"
           id="contact"
           class="bg-white flex justify-center p-4 lg:px-24 py-12 lg:col-span-12 lg:custom-tvelveColumnsGrid group"
         >
@@ -389,9 +392,9 @@
               <p>
                 Znajdziesz nas na
                 <span
-                  class="font-bold italic custom-textDecoration group-hover:decoration-white"
-                  >Instagramie</span
-                >.
+                  class="p-1 font-bold italic custom-textDecoration group-hover:decoration-white group-hover:bg-white group-hover:rounded-lg group-hover:text-[#1b5b31]"
+                  >Instagramie.</span
+                >
               </p>
             </div>
             <div class="flex flex-col items-center justify-center p-8 lg:p-12">
@@ -405,10 +408,10 @@
           </div>
         </div>
         <footer
-          class="text-xs lg:text-base bg-black px-8 lg:px-0 text-white lg:col-span-12 flex flex-col items-center lg:custom-tvelveColumnsGrid"
+          class="text-xs group lg:text-base bg-black px-8 lg:px-0 text-white lg:col-span-12 flex flex-col items-center lg:custom-tvelveColumnsGrid"
         >
           <div
-            class="flex lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 border-b-2 border-b-white pb-12 mt-24"
+            class="flex transition-colors ease-in-out duration-700 lg:mx-[89px] lg:col-start-2 justify-between lg:col-end-11 border-b-2 border-b-white pb-12 mt-24 group-hover:border-b-[#1b5b31]"
           >
             <div class="flex">
               <img class="w-full h-ful" src="/logo-white.svg" alt="logo" />

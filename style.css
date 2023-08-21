@@ -43,7 +43,7 @@
   }
 
   .custom-cardHeading {
-    @apply text-xl lg:text-2xl font-semibold mb-2 font-secondary;
+    @apply text-xl lg:text-2xl font-semibold mb-2 font-secondary custom-textDecoration group-hover:text-[#1b5b31] group-hover:decoration-[#1b5b31];
   }
 
   .custom-cardLink {
@@ -55,7 +55,7 @@
   }
 
   .custom-textDecoration {
-    @apply transition-all ease-in-out duration-1000 decoration-transparent underline decoration-wavy underline-offset-[15px];
+    @apply transition-all ease-in-out duration-1000 decoration-transparent underline decoration-wavy decoration-2 underline-offset-[15px];
   }
 }
 
@@ -70,6 +70,21 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.customCard {
+  transition: all 0.5s ease-in-out;
+  border-radius: 20px;
+}
+
+.customCard:hover {
+  background: rgb(27, 91, 49);
+  background: linear-gradient(
+    90deg,
+    rgba(27, 91, 49, 1) 0%,
+    rgba(245, 240, 236, 1) 100%
+  );
+  box-shadow: -58px -15px 100px -60px rgba(27, 91, 49, 1);
 }
 
 @media (min-width: 1024px) {
@@ -114,6 +129,8 @@
     outline-style: dotted;
     outline-color: transparent;
     cursor: pointer;
+    border-radius: 2%;
+    transform: scale(89%);
   }
 
   .masonryChild:hover {
@@ -121,6 +138,13 @@
     outline-width: 25px;
     outline-style: dashed;
     outline-color: #1b5b31;
+    border-radius: 5%;
+    filter: brightness(80%);
+  }
+
+  .masonryChild:hover:nth-of-type(odd) {
+    transform: rotate(5deg) scale(0.9);
+    filter: brightness(60%);
   }
 }
 

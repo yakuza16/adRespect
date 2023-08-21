@@ -8,7 +8,7 @@ const imagesPath = [
   "/garden-photos/garden6.webp",
   "/garden-photos/garden7.webp",
   "/garden-photos/garden1.webp",
-  "/garden-photos/garden2.png",
+  "/garden-photos/garden2.webp",
 ];
 
 export default imagesPath;

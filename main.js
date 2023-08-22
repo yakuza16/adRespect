@@ -1,8 +1,10 @@
 import Aos from "aos"
+import Splitting from "splitting"
 import "aos/dist/aos.css"
 import "./style.css"
 
 Aos.init()
+Splitting()
 
 const offerMenu = document.getElementById("offer-menu")
 const offerMenuList = document.getElementById("offer-menu-list")

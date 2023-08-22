@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
-    "macy": "^2.5.1"
+    "macy": "^2.5.1",
+    "splitting": "^1.0.6"
   }
 }

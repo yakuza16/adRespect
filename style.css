@@ -102,6 +102,73 @@
   background-position: center;
 }
 
+span.char {
+  animation: expand 2s infinite ease-in-out normal;
+  animation-delay: calc(var(--char-index) * 0.9s);
+  user-select: none;
+}
+
+.customAboutCompanyHeading {
+  animation: expandAboutCompany 2s infinite ease-in-out normal;
+}
+
+.customCtaBtn {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.08);
+  animation: shadow-pulse 1s infinite;
+}
+
+.customCtaBtn:hover {
+  animation: shadow-pulse 0.6s infinite reverse;
+}
+
+#contact:hover .customInstagramBg {
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 1vmin 1vmin 0 #1b5b31;
+    transform: scale(1.05, 2.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes expandAboutCompany {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    text-shadow: 1vmin 1vmin 0 #f5f0ec;
+    transform: scale(1.05, 2.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (min-width: 1024px) {
   .custom-right {
     right: calc(0px - var(--globalMarginX));
@@ -160,23 +227,5 @@
   .masonryChild:hover:nth-of-type(odd) {
     transform: rotate(5deg) scale(0.9);
     filter: brightness(60%);
-  }
-}
-
-.customCtaBtn {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.08);
-  animation: shadow-pulse 1s infinite;
-}
-
-.customCtaBtn:hover {
-  animation: shadow-pulse 0.6s infinite reverse;
-}
-
-@keyframes shadow-pulse {
-  0% {
-    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
-  }
-  100% {
-    box-shadow: 0 0 0 35px rgba(255, 255, 255, 0);
   }
 }

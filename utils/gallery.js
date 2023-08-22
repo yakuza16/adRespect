@@ -25,6 +25,7 @@ function createGallery(images, parentElement) {
   images.forEach((image) => {
     const imageElement = document.createElement("img")
     imageElement.setAttribute("src", image)
+    imageElement.setAttribute("loading", "lazy")
     imageElement.classList.add("masonryChild")
     parentElement.appendChild(imageElement)
   })

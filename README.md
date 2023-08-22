@@ -13,3 +13,7 @@ Wykorzystane zewnętrzne biblioteki JS:
 http://macyjs.com/ - do galerii
 https://michalsnik.github.io/aos/   tzw. animate on scroll -  do części animacji
 https://splitting.js.org/   - do animacji
+
+
+wersja produkcyjna demo: 
+https://adrespect-marcin-splawinski.netlify.app/

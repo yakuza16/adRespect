@@ -1,47 +1,61 @@
-import imagesPath from "./imagesPaths";
+import imagesPath from "./imagesPaths"
 
-const sliderImg = document.getElementById("slider-image");
-const prevSlideBtn = document.getElementById("prevSlideBtn");
-const nextSlideBtn = document.getElementById("nextSlideBtn");
-let active = 4;
-let intervalId = null;
+const prevSlideBtn = document.getElementById("prevSlideBtn")
+const nextSlideBtn = document.getElementById("nextSlideBtn")
+let active = 4
+let intervalId = null
 
-sliderImg.src = imagesPath[active];
+const sliderContainer = document.getElementById("slider-image-container")
+sliderContainer.style.backgroundImage = `url('${imagesPath[active]}')`
 
 const handleClickRight = () => {
   if (active < imagesPath.length - 1) {
-    active++;
-    prevSlideBtn.style.opacity = "100%";
-    sliderImg.src = imagesPath[active];
+    active++
+    prevSlideBtn.style.opacity = "100%"
+    sliderContainer.style.backgroundImage = `url('${imagesPath[active]}')`
     if (active === imagesPath.length - 1) {
-      active = 0;
-      sliderImg.src = imagesPath[active];
+      active = 0
+      sliderContainer.style.backgroundImage = `url('${imagesPath[active]}')`
     }
   }
-};
+}
 
 const handleClickLeft = () => {
-  clearInterval(intervalId);
+  clearInterval(intervalId)
   if (active === 0) {
-    active = imagesPath.length - 1;
-    sliderImg.src = imagesPath[active];
+    active = imagesPath.length - 1
+    sliderContainer.style.backgroundImage = `url('${imagesPath[active]}')`
   } else {
-    active--;
-    sliderImg.src = imagesPath[active];
+    active--
+    sliderContainer.style.backgroundImage = `url('${imagesPath[active]}')`
   }
-};
+}
 
-nextSlideBtn.addEventListener("click", handleClickRight);
-prevSlideBtn.addEventListener("click", handleClickLeft);
+nextSlideBtn.addEventListener("click", () => {
+  clearInterval(intervalId)
+  handleClickRight()
+  setTimeout(() => {
+    clearInterval(intervalId)
+    intervalId = setInterval(handleClickRight, 3000)
+  }, 8000)
+})
+prevSlideBtn.addEventListener("click", () => {
+  clearInterval(intervalId)
+  handleClickLeft()
+  setTimeout(() => {
+    clearInterval(intervalId)
+    intervalId = setInterval(handleClickRight, 3000)
+  }, 8000)
+})
 
 window.addEventListener("DOMContentLoaded", () => {
-  intervalId = setInterval(handleClickRight, 5000);
-});
+  intervalId = setInterval(handleClickRight, 3000)
+})
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 3) {
-    sliderImg.classList.remove("blur-lg");
+    sliderContainer.classList.remove("blur-lg")
   } else if (window.scrollY <= 3) {
-    sliderImg.classList.add("blur-lg");
+    sliderContainer.classList.add("blur-lg")
   }
-});
+})

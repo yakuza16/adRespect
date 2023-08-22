@@ -96,6 +96,12 @@
   box-shadow: -58px -15px 100px -60px rgba(27, 91, 49, 1);
 }
 
+.custom-right {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (min-width: 1024px) {
   .custom-right {
     right: calc(0px - var(--globalMarginX));

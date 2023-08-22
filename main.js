@@ -61,7 +61,7 @@ function initializeCardsAnimation() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-  initializeCardsAnimation
+  initializeCardsAnimation()
   setTimeout(() => searchInput.classList.remove("hidden"), 1000)
 })
 

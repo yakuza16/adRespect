@@ -68,7 +68,7 @@
                 />
               </button>
               <div
-                class="hidden absolute flex flex-col md:flex-row p-6 -right-36 md:-right-0 -top-48 md:-top-12 transform -translate-y-30 z-10 rounded-md transition-all duration-100 ease-in bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute hidden flex flex-col md:flex-row p-6 -right-36 md:-right-0 top-10 md:top-12 z-10 rounded-md transition-all transform -translate-y-[350%] md:-translate-y-[200%] duration-500 ease-in-out shadow-lg ring-1 bg-white ring-black ring-opacity-5 border-2 border-[#1B5B31] focus:outline-none"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -76,7 +76,7 @@
                 id="search-input"
               >
                 <input
-                  class="mx-4 border-2 border-[#1B5B31] p-2 rounded-md"
+                  class="mx-4 border-2 transition-colors duration-500 ease-in-out border-[#1B5B31] p-2 rounded-md focus:bg-[#1b5b31] focus:text-white"
                   id="search"
                   type="text"
                   placeholder="Szukaj..."
@@ -142,10 +142,10 @@
 
             <!-- Slider Arrows -->
             <div class="absolute bottom-0 right-0 flex">
-              <button id="prevSlideBtn" class="bg-white">
+              <button id="prevSlideBtn" class="custom-navMenuSlideArrows">
                 <img src="/left-arrow.svg" alt="left arrow" />
               </button>
-              <button id="nextSlideBtn" class="bg-white">
+              <button id="nextSlideBtn" class="custom-navMenuSlideArrows">
                 <img src="/right-arrow.svg" alt="right arrow" />
               </button>
             </div>
@@ -380,7 +380,7 @@
         <div
           data-aos="zoom-in-up"
           data-aos-easing="ease-in-sine"
-          data-aos-duration="3000"
+          data-aos-duration="2000"
           id="contact"
           class="bg-white flex justify-center p-4 lg:px-24 py-12 lg:col-span-12 lg:custom-tvelveColumnsGrid group"
         >
@@ -494,7 +494,7 @@
       </main>
     </div>
     <script defer type="module" src="/main.js"></script>
-    <script defer type="module" src="/slider.js"></script>
-    <script defer type="module" src="/gallery.js"></script>
+    <script defer type="module" src="utils/slider.js"></script>
+    <script defer type="module" src="utils/gallery.js"></script>
   </body>
 </html>

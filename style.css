@@ -19,6 +19,11 @@
     background-color: #f5f0ec;
     scroll-behavior: smooth;
   }
+
+  ::selection {
+    color: white;
+    background-color: #1b5b31;
+  }
 }
 
 @layer components {
@@ -28,6 +33,10 @@
 
   .custom-navMenuItems {
     @apply transition-colors ease-in-out duration-200 hover:text-[#1B5B31];
+  }
+
+  .custom-navMenuSlideArrows {
+    @apply bg-white transition-colors ease-in-out duration-150 hover:bg-[#DCC1AB];
   }
 
   .custom-navOfferMenuItems {
